@@ -11,7 +11,7 @@
     "vercel-build": "hexo clean && hexo config future false && hexo generate"
   },
   "hexo": {
-    "version": "7.0.0"
+    "version": "7.3.0"
   },
   "dependencies": {
     "@notionhq/client": "^2.3.0",
