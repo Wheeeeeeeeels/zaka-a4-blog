@@ -13,8 +13,8 @@
     "deploy": "hexo clean && hexo generate && hexo deploy"
   },
   "dependencies": {
-    "@notionhq/client": "^2.2.14",
-    "dotenv": "^16.3.1"
+    "@notionhq/client": "^2.3.0",
+    "dotenv": "^16.5.0"
   },
   "repository": {
     "type": "git",
@@ -36,5 +36,5 @@
     "url": "https://github.com/HiNinojay/hexo-theme-A4/issues"
   },
   "homepage": "https://github.com/HiNinojay/hexo-theme-A4#readme",
-  "main": "_config.yml" 
+  "main": "_config.yml"
 }
