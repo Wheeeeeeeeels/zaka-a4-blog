@@ -1,23 +1,6 @@
 {
-  "version": 2,
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "public",
   "framework": "hexo",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "zeroConfig": true,
-        "distDir": "public"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "installCommand": "npm install"
 } 
