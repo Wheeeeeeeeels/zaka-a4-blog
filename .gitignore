@@ -1,4 +1,14 @@
 .DS_Store
-layout/.DS_Store
-source/.DS_Store
-source/img/.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+.env
+.vscode/
+.idea/
+*.iml
+.vercel
+.temp
+.cache

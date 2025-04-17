@@ -8,7 +8,13 @@
     "format": "prettier --write ./source/js/*.js ./scripts ",
     "lint:style": "stylelint --fix ./source/css",
     "git:push": "git push --tag && git push -u origin dev",
-    "git:add": "npm run lint:style && git add ."
+    "git:add": "npm run lint:style && git add .",
+    "notion:sync": "node scripts/notion-sync.js",
+    "deploy": "hexo clean && hexo generate && hexo deploy"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "dotenv": "^16.3.1"
   },
   "repository": {
     "type": "git",
