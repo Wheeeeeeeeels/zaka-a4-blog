@@ -8,7 +8,7 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "notion:sync": "node scripts/notion-sync.js",
-    "vercel-build": "hexo clean && hexo generate"
+    "vercel-build": "hexo clean && hexo config future false && hexo generate"
   },
   "hexo": {
     "version": "7.0.0"
