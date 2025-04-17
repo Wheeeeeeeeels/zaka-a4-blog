@@ -4,6 +4,8 @@
   "private": false,
   "description": "A hexo theme that looks like an A4 paper.",
   "scripts": {
+    "build": "hexo generate",
+    "vercel-build": "npm run build",
     "npm:publish": "npm publish",
     "format": "prettier --write ./source/js/*.js ./scripts ",
     "lint:style": "stylelint --fix ./source/css",
@@ -13,8 +15,8 @@
     "deploy": "hexo clean && hexo generate && hexo deploy"
   },
   "dependencies": {
-    "@notionhq/client": "^2.3.0",
-    "dotenv": "^16.5.0"
+    "@notionhq/client": "^2.2.14",
+    "dotenv": "^16.3.1"
   },
   "repository": {
     "type": "git",
