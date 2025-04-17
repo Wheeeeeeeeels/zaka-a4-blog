@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "@notionhq/client": "^2.2.14",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "hexo": "^7.0.0",
+    "hexo-cli": "^4.3.1"
   },
   "repository": {
     "type": "git",
