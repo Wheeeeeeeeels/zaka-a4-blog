@@ -103,3 +103,15 @@ theme: a4
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# A4主题配置
+a4:
+  home:
+    title: "My Blog"
+    description: "Welcome to my blog"
+  menu:
+    Home: /
+    Archives: /archives
+    About: /about
+  social:
+    email: 12345679@gmail.com
