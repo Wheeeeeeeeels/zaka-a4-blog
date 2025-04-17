@@ -1,9 +1,9 @@
-name: Sync Notion Posts
+name: Notion Sync
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时运行一次
-  workflow_dispatch:      # 允许手动触发
+    - cron: '0 0 * * *'  # 每天凌晨 0 点运行
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   sync:
@@ -17,23 +17,18 @@ jobs:
           node-version: '18'
           
       - name: Install dependencies
-        run: npm install @notionhq/client dotenv
+        run: npm install
         
-      - name: Sync Notion posts
-        run: node scripts/notion-sync.js
+      - name: Run Notion sync
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-          
+        run: npm run notion:sync
+        
       - name: Commit changes
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: sync notion posts"
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }} 
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add source/_posts/
+          git commit -m "Update posts from Notion" || exit 0
+          git push 
