@@ -5,16 +5,15 @@ date: 2024-03-17
 
 ## 关于我
 
-热爱技术，热爱生活。
-专注于技术学习与分享，希望通过这个博客记录自己的成长历程。
+工程师，书虫，越野跑爱好者
 
-## 技术栈
+## 研究方向与兴趣范围
 
-- 编程语言：Java, Python, JavaScript
-- 前端技术：React, Vue, TypeScript
-- 后端技术：Spring Boot, Node.js
-- 数据库：MySQL, MongoDB
-- 其他：Docker, Kubernetes
+- Distributed Systems
+- Database Kernel
+- LLM 
+- Embodied Intelligence
+- computer graphics
 
 ## 联系方式
 
